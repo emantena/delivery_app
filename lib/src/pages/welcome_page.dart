@@ -65,7 +65,9 @@ class WelcomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, 'login');
+                  },
                   child: const Text('Login'),
                 ),
               ),

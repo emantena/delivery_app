@@ -70,7 +70,9 @@ class LoginPage extends StatelessWidget {
                       Container(
                         margin: const EdgeInsets.only(top: 20),
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.pushNamed(context, "forgot-password");
+                          },
                           child: Text(
                             "Forgot your password?",
                             style: TextStyle(

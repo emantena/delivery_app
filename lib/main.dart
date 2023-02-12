@@ -1,10 +1,10 @@
+import 'package:delivery_app/src/routes/app_route.dart';
 import 'package:flutter/material.dart';
 
 // Color
 import 'src/colors/app_color.dart';
 
 // Routes
-import 'package:my_app/src/routes/app_route.dart';
 
 void main() {
   runApp(const DeliveryApp());

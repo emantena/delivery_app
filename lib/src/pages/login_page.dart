@@ -96,7 +96,9 @@ class LoginPage extends StatelessWidget {
                               ),
                             ),
                             GestureDetector(
-                              onTap: () {},
+                              onTap: () {
+                                Navigator.pushNamed(context, 'sign-up');
+                              },
                               child: Text(
                                 "Sign up",
                                 style: TextStyle(

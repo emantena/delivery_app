@@ -175,7 +175,9 @@ class LoginPage extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, 'tabs');
+        },
         child: const Text(
           'Login',
           style: TextStyle(

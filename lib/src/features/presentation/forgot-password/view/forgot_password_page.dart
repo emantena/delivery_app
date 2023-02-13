@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../colors/app_color.dart';
-import '../widgets/back_button.dart';
+import '../../../../colors/app_color.dart';
+import '../../widgets/back_button.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
   const ForgotPasswordPage({super.key});

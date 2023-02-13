@@ -1,5 +1,6 @@
 import 'package:delivery_app/src/routes/app_route.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // Color
 import 'src/colors/app_color.dart';
@@ -15,6 +16,11 @@ class DeliveryApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle.light.copyWith(
+        statusBarColor: Colors.black,
+      ),
+    );
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: appRoute,

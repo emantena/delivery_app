@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 // Pages
-import 'package:delivery_app/src/pages/forgot_password_page.dart';
-import 'package:delivery_app/src/pages/login_page.dart';
-import 'package:delivery_app/src/pages/welcome_page.dart';
-import 'package:delivery_app/src/pages/sign-up-page.dart';
-import 'package:delivery_app/src/pages/modules/tab_navigation.dart';
+import 'package:delivery_app/src/features/presentation/forgot-password/view/forgot_password_page.dart';
+import 'package:delivery_app/src/features/presentation/login/view/login_page.dart';
+import 'package:delivery_app/src/features/presentation/welcome/view/welcome_page.dart';
+import 'package:delivery_app/src/features/presentation/sign-up/view/sign-up-page.dart';
+import 'package:delivery_app/src/features/presentation/tabs/tab_navigation.dart';
 
 final appRoute = <String, WidgetBuilder>{
   "welcome": (BuildContext context) => const WelcomePage(),

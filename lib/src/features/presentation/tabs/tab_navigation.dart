@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:delivery_app/src/colors/app_color.dart';
-import 'package:delivery_app/src/pages/modules/explore/explore_page.dart';
-import 'package:delivery_app/src/pages/modules/favorite/favorite_page.dart';
-import 'package:delivery_app/src/pages/modules/order/order_page.dart';
-import 'package:delivery_app/src/pages/modules/profile/profile_page.dart';
 
-class MainNavigation extends StatefulWidget {
-  const MainNavigation({Key? key}) : super(key: key);
+import 'package:delivery_app/src/colors/app_color.dart';
+
+import 'package:delivery_app/src/features/presentation/tabs/explore/explore_page.dart';
+import 'package:delivery_app/src/features/presentation/tabs/favorite/favorite_page.dart';
+import 'package:delivery_app/src/features/presentation/tabs/order/order_page.dart';
+import 'package:delivery_app/src/features/presentation/tabs/profile/profile_page.dart';
+
+class TabNavigation extends StatefulWidget {
+  const TabNavigation({Key? key}) : super(key: key);
 
   @override
-  _MainNavigationState createState() => _MainNavigationState();
+  _TabNavigationState createState() => _TabNavigationState();
 }
 
-class _MainNavigationState extends State<MainNavigation> {
+class _TabNavigationState extends State<TabNavigation> {
   final List<Widget> _pageItems = [
     ExplorePage(),
     OrderPage(),

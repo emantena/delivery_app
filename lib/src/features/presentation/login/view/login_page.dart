@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -48,13 +49,10 @@ class LoginPage extends StatelessWidget {
                 child: Center(
                   child: Column(
                     children: [
-                      Text(
-                        "Welcome back",
-                        style: TextStyle(
-                          color: Theme.of(context).primaryColor,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 30,
-                        ),
+                      headerText(
+                        text: "Welcome back",
+                        color: AppColor.primary,
+                        fontSize: 30,
                       ),
                       Text(
                         "Login to you account",

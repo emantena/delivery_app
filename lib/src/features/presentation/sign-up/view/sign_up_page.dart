@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../colors/app_color.dart';
@@ -26,13 +27,10 @@ class SignUpPage extends StatelessWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(30),
-                  child: Text(
-                    "Create an account",
-                    style: TextStyle(
-                      color: AppColor.primary,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 38,
-                    ),
+                  child: headerText(
+                    text: "Create an account",
+                    color: AppColor.primary,
+                    fontSize: 38,
                   ),
                 ),
                 _userNameTextField(),

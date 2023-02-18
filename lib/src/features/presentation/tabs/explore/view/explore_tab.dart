@@ -1,8 +1,12 @@
-import 'package:delivery_app/src/colors/app_color.dart';
+import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
 
+import 'package:delivery_app/src/colors/app_color.dart';
+
 class ExploreTab extends StatefulWidget {
+  const ExploreTab({super.key});
+
   @override
   _ExploreTabState createState() => _ExploreTabState();
 }
@@ -18,13 +22,10 @@ class _ExploreTabState extends State<ExploreTab> {
               _topBar(context),
               Container(
                 padding: const EdgeInsets.all(16),
-                child: Text(
-                  'Discovery new places',
-                  style: TextStyle(
-                    color: AppColor.primary,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 32,
-                  ),
+                child: headerText(
+                  text: "Discovery new places",
+                  color: AppColor.primary,
+                  fontSize: 32,
                 ),
               ),
               _sliderCard(),

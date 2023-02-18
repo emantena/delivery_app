@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 
 import '../../../../colors/app_color.dart';
 import '../../widgets/back_button.dart';
@@ -26,13 +27,10 @@ class ForgotPasswordPage extends StatelessWidget {
               children: [
                 Container(
                   padding: const EdgeInsets.all(30),
-                  child: Text(
-                    "Forgot password",
-                    style: TextStyle(
-                      color: AppColor.primary,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 38,
-                    ),
+                  child: headerText(
+                    text: "Forgot password",
+                    color: AppColor.primary,
+                    fontSize: 38,
                   ),
                 ),
                 Container(
@@ -126,12 +124,10 @@ class ForgotPasswordPage extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                const Text(
-                  "Your password has been reset",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20,
-                  ),
+                headerText(
+                  text: "Your password has been reset",
+                  fontSize: 20,
+                  color: AppColor.primary,
                 ),
                 const SizedBox(
                   height: 20,

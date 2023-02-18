@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:ui';
 
 import '../../../../colors/app_color.dart';
+import '../../widgets/header_text.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -28,13 +29,10 @@ class WelcomePage extends StatelessWidget {
             children: [
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 50),
-                child: Text(
-                  "delivered fast food to your door".toUpperCase(),
-                  style: const TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 50,
-                  ),
+                child: headerText(
+                  text: "DELIVERED FAST FOOD TO YOUR DOOR",
+                  color: Colors.white,
+                  fontSize: 50,
                 ),
               ),
               Container(

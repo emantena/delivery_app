@@ -13,7 +13,7 @@ void main() {
 }
 
 class DeliveryApp extends StatelessWidget {
-  const DeliveryApp();
+  const DeliveryApp({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

@@ -1,0 +1,94 @@
+{
+    "35535353": {
+        "address": "Carrer dels Arcs, 5 (Barcelona). Con Portal de l'Àngel.",
+        "adminId": "6363789299292",
+        "average": 4.8,
+        "city": "Barcelona",
+        "collectionId": "25",
+        "country": "Spain",
+        "description": "Gastronomía, arte y cultura en el casco antiguo de la ciudad",
+        "email": "info@restaurante.com",
+        "favourites": 137000,
+        "imgs": [
+            "https://www.bcnrestaurantes.com/img-trans/productos/20598/fotos/575-59e62a929f8c0-el-cercle.jpeg",
+            "https://www.bcnrestaurantes.com/img-trans/productos/20598/fotos/575-59e72b1ba242b-el-cercle.jpeg",
+            "https://image.freepik.com/foto-gratis/mujer-comiendo-pasta-restaurante-italiano_1303-24364.jpg"
+        ],
+        "lat": "41.384623",
+        "long": "2.174485",
+        "phoneNumber": "535353",
+        "placeId": "35535353",
+        "placeName": "RESTAURANTE EL CERCLE",
+        "ratings": 351,
+        "zipCode": "08002"
+    },
+    "060606060606": {
+        "address": "Moll d' Espanya, 5 (Barcelona). Maremagnum",
+        "adminId": "6363789299292",
+        "average": 4.8,
+        "city": "Barcelona",
+        "collectionId": "8",
+        "country": "Spain",
+        "description": "Restaurante Mirandoalmar, cocina mediterránea con vistas",
+        "email": "info@restaurante.com",
+        "favourites": 137000,
+        "imgs": [
+            "https://www.bcnrestaurantes.com/img-trans/productos/21513/fotos/575-5a99251d3d6b0-mirandoalmar.jpeg",
+            "https://www.bcnrestaurantes.com/img-trans/productos/21513/fotos/575-570bc10e29609-mirandoalmar.jpeg",
+            "https://image.freepik.com/foto-gratis/mujer-comiendo-pasta-restaurante-italiano_1303-24364.jpg"
+        ],
+        "lat": "41.376013",
+        "long": "2.182243",
+        "phoneNumber": "5353535353",
+        "placeId": "060606060606",
+        "placeName": "RESTAURANTE MIRANDOALMAR",
+        "ratings": 351,
+        "zipCode": "08029"
+    },
+    "535353637738288118": {
+        "address": "Carrer del Consell de Cent, 336 - 08036 Barcelona",
+        "adminId": "6363789299292",
+        "average": 4.8,
+        "city": "Barcelona",
+        "collectionId": "8",
+        "country": "Spain",
+        "description": "La auténtica pizza napolitana en Barcelona",
+        "email": "info@restaurante.com",
+        "favourites": 137000,
+        "imgs": [
+            "https://image.freepik.com/foto-gratis/interior-restaurante_1127-3394.jpg",
+            "https://image.freepik.com/foto-gratis/chef-cocinando-comida-cocina-restaurante_53876-67.jpg",
+            "https://image.freepik.com/foto-gratis/mujer-comiendo-pasta-restaurante-italiano_1303-24364.jpg"
+        ],
+        "lat": "41.392856",
+        "long": "2.168042",
+        "phoneNumber": "5353535",
+        "placeId": "535353637738288118",
+        "placeName": "Antica Pizzería Da Michele",
+        "ratings": 351,
+        "zipCode": "08029"
+    },
+    "9898989898": {
+        "address": "Carrer del Rosselló, 253 (Barcelona). Entre Rbla. Catalunya y Pg. de Gràcia.",
+        "adminId": "6363789299292",
+        "average": 4.8,
+        "city": "Barcelona",
+        "collectionId": "8",
+        "country": "Spain",
+        "description": "Restaurante Margherita, excelente cocina italiana casera",
+        "email": "info@restaurante.com",
+        "favourites": 137000,
+        "imgs": [
+            "https://image.freepik.com/foto-gratis/interior-restaurante_1127-3394.jpg",
+            "https://image.freepik.com/foto-gratis/chef-cocinando-comida-cocina-restaurante_53876-67.jpg",
+            "https://image.freepik.com/foto-gratis/mujer-comiendo-pasta-restaurante-italiano_1303-24364.jpg"
+        ],
+        "lat": "41.394966",
+        "long": "2.159531",
+        "phoneNumber": "6363663",
+        "placeId": "9898989898",
+        "placeName": "RESTAURANTE MARGHERITA",
+        "ratings": 351,
+        "zipCode": "08008"
+    }
+}

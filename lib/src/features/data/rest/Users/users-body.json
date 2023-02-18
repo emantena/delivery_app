@@ -1,0 +1,15 @@
+{
+    "L0vuN9HivNSakuQtRKGrYlDa3fR2": {
+        "billingAddress" : "",
+        "dateOfBirth" : "11/11/2021",
+        "email" : "cane1@gmail.com",
+        "idToken" : "eyJhbGciOiJSUzI1NiIsImtpZCI6IjJlMzZhMWNiZDBiMjE2NjYxOTViZGIxZGZhMDFiNGNkYjAwNzg3OWQiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vZGVsaXZlcnktYXBwLWZsdXR0ZXItcHJ1ZWJhcyIsImF1ZCI6ImRlbGl2ZXJ5LWFwcC1mbHV0dGVyLXBydWViYXMiLCJhdXRoX3RpbWUiOjE2MzczOTk4MDQsInVzZXJfaWQiOiJMMHZ1TjlIaXZOU2FrdVF0UktHcllsRGEzZlIyIiwic3ViIjoiTDB2dU45SGl2TlNha3VRdFJLR3JZbERhM2ZSMiIsImlhdCI6MTYzNzM5OTgwNCwiZXhwIjoxNjM3NDAzNDA0LCJlbWFpbCI6ImNhbmUxQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjpmYWxzZSwiZmlyZWJhc2UiOnsiaWRlbnRpdGllcyI6eyJlbWFpbCI6WyJjYW5lMUBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.cRJKbW78MXymoxvbx7r_K-aqlsth6K_m2WAhmFlyn5w10h85O4Du-wzM4HyAz5GZmhuszxNJ1mYoIS-6FuFLpBOcfzk8I8jlVwF18Cc96uuoDvTuj1joiWFbys5B19cMN2Jpgw6EWGlYg__VR3NVY9j_E2jLmGaebKIZxPig0AaU_WRlrmGTSiiUXx96vJcP8AlraoFZ2SrMUT7yI2cNsjjG8CJTJ1aBG8kDzVwmAPL9Q648MOOm49r2GOcMdlzwU_j4Msver01NC3s-lB0xkxXboSBi4NsMnnEymAbtZyn_vrUwrZgBdXiDSjaaTGU-ZiavLlVOvkowyr8OzRCkNg",
+        "localId" : "L0vuN9HivNSakuQtRKGrYlDa3fR2",
+        "phone" : "2323232",
+        "photo" : "https://firebasestorage.googleapis.com/v0/b/delivery-app-yt.appspot.com/o/DefaultAvatar%2Fuser.png?alt=media&token=2379a3d6-d175-4ccf-9fcf-907080209cab",
+        "role" : "user",
+        "shippingAddress" : "",
+        "startDate" : "20/11/2021",
+        "username" : "Cane"
+    }
+}

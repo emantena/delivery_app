@@ -1,0 +1,24 @@
+{
+    "kind": "identitytoolkit#GetAccountInfoResponse",
+    "users": [
+        {
+            "localId": "2AJDEiQwmgONsYUwVIIdzy7rc7M2",
+            "email": "cane2@gmail.com",
+            "passwordHash": "UkVEQUNURUQ=",
+            "emailVerified": false,
+            "passwordUpdatedAt": 1630232701531,
+            "providerUserInfo": [
+                {
+                    "providerId": "password",
+                    "federatedId": "cane2@gmail.com",
+                    "email": "cane2@gmail.com",
+                    "rawId": "cane2@gmail.com"
+                }
+            ],
+            "validSince": "1630232701",
+            "lastLoginAt": "1630232898027",
+            "createdAt": "1630232701531",
+            "lastRefreshAt": "2021-08-29T10:25:01.531Z"
+        }
+    ]
+}

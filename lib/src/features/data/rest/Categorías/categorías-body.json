@@ -1,0 +1,152 @@
+{
+    "american": {
+        "img": "https://image.freepik.com/foto-gratis/alitas-pollo-al-horno-al-estilo-asiatico_2829-10159.jpg",
+        "name": "American",
+        "id": 5
+    },
+    "arab": {
+        "img": "https://image.freepik.com/foto-gratis/falafel-hummus-pita-platos-oriente-medio-o-arabe-comida-halal-vista-superior-copia-espacio_2829-14288.jpg",
+        "name": "Arab",
+        "id": 9
+    },
+    "argentina": {
+        "img": "https://image.freepik.com/foto-gratis/arreglo-conceptual-delicioso-alfajores_23-2148777349.jpg",
+        "name": "Argentina",
+        "id": 10
+    },
+    "brazilian": {
+        "img": "https://image.freepik.com/foto-gratis/arreglo-deliciosos-chips-yuca_23-2149091056.jpg",
+        "name": "Brazilian",
+        "id": 13
+    },
+    "breakfast": {
+        "img": "https://image.freepik.com/foto-gratis/cafe-croissants-desayuno_23-2148877588.jpg",
+        "name": "Breakfast",
+        "id": 16
+    },
+    "caribbean": {
+        "img": "https://image.freepik.com/foto-gratis/frutas-tabla-cortar_140725-100.jpg",
+        "name": "Caribbean",
+        "id": 14
+    },
+    "china": {
+        "img": "https://image.freepik.com/foto-gratis/salteado-pollo-calabacin-pimientos-cebolla-verde-palillos_2829-10785.jpg",
+        "name": "China",
+        "id": 7
+    },
+    "cookityourself": {
+        "img": "https://image.freepik.com/foto-gratis/delicioso-pastel-ciruelas-frescas-frambuesas_2829-5473.jpg",
+        "name": "Cook it yourself",
+        "id": 15
+    },
+    "ecuadorian": {
+        "img": "https://image.freepik.com/foto-gratis/ingredientes-mexicanos-colores_23-2148224164.jpg",
+        "name": "Ecuadorian",
+        "id": 17
+    },
+    "empanadas": {
+        "img": "https://image.freepik.com/foto-gratis/empanadas-carne-masa-bougie-tabla-madera_140725-4827.jpg",
+        "name": "Empanadas",
+        "id": 18
+    },
+    "gourmet": {
+        "img": "https://image.freepik.com/foto-gratis/chef-colocando-hierba-comida-gourmet_23-2148516908.jpg",
+        "name": "Gourmet",
+        "id": 2
+    },
+    "greek": {
+        "img": "https://image.freepik.com/foto-gratis/ensalada-griega-pepino-tomate-pimiento-dulce-lechuga-cebolla-verde-queso-feta-aceitunas-aceite-oliva-comida-sana-vista-superior_2829-19685.jpg",
+        "name": "Greek",
+        "id": 20
+    },
+    "halal": {
+        "img": "https://image.freepik.com/foto-gratis/gajar-halwa-tambien-conocido-como-gajorer-halua-gajrela-gajar-pak-zanahoria-halwa-es-pudin-postre-dulce-base-zanahoria-subcontinente-indio_466689-75509.jpg",
+        "name": "Halal",
+        "id": 21
+    },
+    "hamburger": {
+        "img": "https://image.freepik.com/foto-gratis/sandwich-grande-hamburguesa-jugosa-hamburguesa-ternera-queso-tomate-cebolla-roja-mesa-madera_2829-19631.jpg",
+        "name": "Hamburger",
+        "id": 22
+    },
+    "icecreamshop": {
+        "img": "https://image.freepik.com/foto-gratis/tazon-postre-helado-chocolate-vainilla-cerrar_53876-106080.jpg",
+        "name": "Ice Cream Shop",
+        "id": 23
+    },
+    "india": {
+        "img": "https://image.freepik.com/foto-gratis/hermoso-sabroso-apetitosos-ingredientes-especias-red-chilli-pepper-mercearia-cocinar-cocina-saludable_1220-1676.jpg",
+        "name": "India",
+        "id": 24
+    },
+    "italian": {
+        "img": "https://image.freepik.com/foto-gratis/concepto-cocina-ingredientes-cocinar_1220-5184.jpg",
+        "name": "Italian",
+        "id": 4
+    },
+    "japanese": {
+        "img": "https://image.freepik.com/foto-gratis/sushi-set-hot-rolls-aguacate-california-rollos-salmon_141793-1279.jpg",
+        "name": "Japanese",
+        "id": 25
+    },
+    "kebab": {
+        "img": "https://image.freepik.com/foto-gratis/vista-lateral-doner-salsa-tomate-carne-pepino-papas-fritas-tablero_141793-4882.jpg",
+        "name": "Kebab",
+        "id": 26
+    },
+    "lebanese": {
+        "img": "https://image.freepik.com/foto-gratis/postres-tradicionales-orientales-mesa_93675-131751.jpg",
+        "name": "Lebanese",
+        "id": 27
+    },
+    "mediterranean": {
+        "img": "https://image.freepik.com/foto-gratis/aceitunas-verdes-aceite_144627-26921.jpg",
+        "name": "Mediterranean",
+        "id": 29
+    },
+    "mexican": {
+        "img": "https://image.freepik.com/foto-gratis/plato-nachos-salsa-salsa_23-2148181586.jpg",
+        "name": "Mexican",
+        "id": 6
+    },
+    "moroccan": {
+        "img": "https://image.freepik.com/foto-gratis/tajine-platos-tradicionales-cuscus-ensalada-fresca-mesa-madera-rustica-tagine-carne-cordero-calabaza-vista-superior-lay-flat_2829-6116.jpg",
+        "name": "Moroccan",
+        "id": 28
+    },
+    "pizza": {
+        "img": "https://image.freepik.com/foto-gratis/vista-superior-pizza-pepperoni-salchichas-salsa-tomate-queso-chispas-hierbas_140725-652.jpg",
+        "name": "Pizza",
+        "id": 8
+    },
+    "promo": {
+        "img": "https://static6.depositphotos.com/1059850/588/v/600/depositphotos_5884100-stock-illustration-promo-background.jpg",
+        "name": "Promo",
+        "id": 1
+    },
+    "rice": {
+        "img": "https://image.freepik.com/foto-gratis/paella-espanola-mariscos-mejillones-camarones-etc-paellera-acero-canarias-cocina-pequeno-restaurante-familiar_1217-1763.jpg",
+        "name": "Cooking rice",
+        "id": 11
+    },
+    "snack": {
+        "img": "https://image.freepik.com/foto-gratis/cerveza-bocadillos_144627-36555.jpg",
+        "name": "Snack",
+        "id": 12
+    },
+    "spanish": {
+        "img": "https://image.freepik.com/foto-gratis/sabrosa-paella-espanola-marisco_1205-8950.jpg",
+        "name": "Spanish",
+        "id": 19
+    },
+    "turkish": {
+        "img": "https://image.freepik.com/foto-gratis/tortilla-envuelta-falafel-ensalada-fresca-tacos-veganos-comida-vegetariana-saludable-vista-superior_2829-14371.jpg",
+        "name": "Turkish",
+        "id": 3
+    },
+    "vegan": {
+        "img": "https://image.freepik.com/foto-gratis/menu-dietetico-ensalada-vegana-saludable-verduras-brocoli-champinones-espinacas-quinua-tazon-endecha-plana-vista-superior_2829-20115.jpg",
+        "name": "Vegan",
+        "id": 30
+    }
+}

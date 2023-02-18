@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:delivery_app/src/colors/app_color.dart';
 
-import 'package:delivery_app/src/features/presentation/tabs/explore/explore_page.dart';
+import 'package:delivery_app/src/features/presentation/tabs/explore/view/explore_tab.dart';
 import 'package:delivery_app/src/features/presentation/tabs/favorite/favorite_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/order/order_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/profile/profile_page.dart';
@@ -16,7 +16,7 @@ class TabNavigation extends StatefulWidget {
 
 class _TabNavigationState extends State<TabNavigation> {
   final List<Widget> _pageItems = [
-    ExplorePage(),
+    ExploreTab(),
     OrderPage(),
     FavoritePage(),
     ProfilePage(),

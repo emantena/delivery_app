@@ -1,3 +1,4 @@
+// @dart=2.9
 import 'package:delivery_app/src/routes/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -12,7 +13,7 @@ void main() {
 }
 
 class DeliveryApp extends StatelessWidget {
-  const DeliveryApp({super.key});
+  const DeliveryApp();
 
   @override
   Widget build(BuildContext context) {

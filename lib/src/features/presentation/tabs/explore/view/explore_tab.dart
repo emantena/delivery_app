@@ -1,6 +1,8 @@
-import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_swiper/flutter_swiper.dart';
+
+import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
+import 'package:delivery_app/src/features/presentation/widgets/list_restaurant.dart';
 
 import 'package:delivery_app/src/colors/app_color.dart';
 
@@ -28,7 +30,33 @@ class _ExploreTabState extends State<ExploreTab> {
                   fontSize: 32,
                 ),
               ),
-              _sliderCard(),
+              Container(
+                padding: const EdgeInsets.all(16),
+                child: _sliderCard(),
+              ),
+              Container(
+                padding: const EdgeInsets.all(16),
+                child: listRestaurants(
+                  context: context,
+                  textHeader: "Popular this week",
+                  gestureDetector: GestureDetector(
+                    onTap: () {},
+                    child: Row(
+                      children: const [
+                        Text(
+                          'Show all',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        ),
+                        Icon(Icons.play_arrow),
+                      ],
+                    ),
+                  ),
+                ),
+              )
             ]),
           ),
         ],
@@ -88,7 +116,7 @@ class _ExploreTabState extends State<ExploreTab> {
 
   Widget _sliderCard() {
     return SizedBox(
-      height: 360,
+      height: 325,
       child: Swiper(
         itemCount: 4,
         layout: SwiperLayout.DEFAULT,

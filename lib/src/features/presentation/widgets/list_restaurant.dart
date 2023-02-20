@@ -38,8 +38,6 @@ Widget _restaurants(BuildContext context) {
     children: [
       _restaurantCard(context),
       _restaurantCard(context),
-      _restaurantCard(context),
-      _restaurantCard(context),
     ],
   );
 }

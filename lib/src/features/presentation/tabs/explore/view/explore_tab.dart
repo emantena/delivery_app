@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_swiper/flutter_swiper.dart';
 
 import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 import 'package:delivery_app/src/features/presentation/widgets/list_restaurant.dart';
@@ -20,44 +19,50 @@ class _ExploreTabState extends State<ExploreTab> {
       child: CustomScrollView(
         slivers: [
           SliverList(
-            delegate: SliverChildListDelegate([
-              _topBar(context),
-              Container(
-                padding: const EdgeInsets.all(16),
-                child: headerText(
-                  text: "Discovery new places",
-                  color: AppColor.primary,
-                  fontSize: 32,
+            delegate: SliverChildListDelegate(
+              [
+                _topBar(context),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: headerText(
+                    text: "Discovery new places",
+                    color: AppColor.primary,
+                    fontSize: 32,
+                  ),
                 ),
-              ),
-              Container(
-                padding: const EdgeInsets.all(16),
-                child: _sliderCard(),
-              ),
-              Container(
-                padding: const EdgeInsets.all(16),
-                child: listRestaurants(
-                  context: context,
-                  textHeader: "Popular this week",
-                  gestureDetector: GestureDetector(
-                    onTap: () {},
-                    child: Row(
-                      children: const [
-                        Text(
-                          'Show all',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 15,
+                Container(
+                  child: _sliderCard(),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(16),
+                  child: listRestaurants(
+                    context: context,
+                    textHeader: "Popular this week",
+                    gestureDetector: GestureDetector(
+                      onTap: () {},
+                      child: Row(
+                        children: const [
+                          Text(
+                            'Show all',
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 15,
+                            ),
                           ),
-                        ),
-                        Icon(Icons.play_arrow),
-                      ],
+                          Icon(Icons.play_arrow),
+                        ],
+                      ),
                     ),
                   ),
                 ),
-              )
-            ]),
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  child: _sliderCollection(),
+                ),
+                const SizedBox(height: 30)
+              ],
+            ),
           ),
         ],
       ),
@@ -117,17 +122,14 @@ class _ExploreTabState extends State<ExploreTab> {
   Widget _sliderCard() {
     return SizedBox(
       height: 325,
-      child: Swiper(
+      child: ListView.builder(
+        padding: const EdgeInsets.only(left: 25),
+        physics: const BouncingScrollPhysics(),
+        scrollDirection: Axis.horizontal,
         itemCount: 4,
-        layout: SwiperLayout.DEFAULT,
-        itemBuilder: (BuildContext context, int index) {
-          return ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemBuilder: (BuildContext context, int index) {
-              return _card(context);
-            },
-          );
-        },
+        itemBuilder: ((context, index) {
+          return _card(context);
+        }),
       ),
     );
   }
@@ -144,7 +146,8 @@ class _ExploreTabState extends State<ExploreTab> {
               width: 200,
               height: 250,
               fit: BoxFit.cover,
-              image: NetworkImage("https://images.unsplash.com/photo-1565299585323-38d6b0865b47"),
+              image: NetworkImage(
+                  "https://firebasestorage.googleapis.com/v0/b/delivery-app-4c9cb.appspot.com/o/photo-1565299585323-38d6b0865b47%20(1).jpeg?alt=media&token=7b15b760-b60e-46e2-b370-57b30dc05403"),
             ),
           ),
           Column(
@@ -217,6 +220,74 @@ class _ExploreTabState extends State<ExploreTab> {
             ],
           )
         ],
+      ),
+    );
+  }
+
+  Widget _sliderCollection() {
+    return Column(
+      children: [
+        Row(
+          children: [
+            Container(
+              alignment: Alignment.centerLeft,
+              child: headerText(
+                text: "Collection",
+                color: AppColor.primary,
+                fontSize: 20,
+              ),
+            ),
+            const Spacer(),
+            GestureDetector(
+              onTap: () {},
+              child: Row(
+                children: const [
+                  Text(
+                    'Show all',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 15,
+                    ),
+                  ),
+                  Icon(Icons.play_arrow),
+                ],
+              ),
+            ),
+          ],
+        ),
+        Column(
+          children: [
+            SizedBox(
+              height: 200,
+              child: ListView.builder(
+                padding: const EdgeInsets.only(left: 25),
+                physics: const BouncingScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemCount: 4,
+                itemBuilder: ((context, index) {
+                  return _cardCollection(context);
+                }),
+              ),
+            ),
+          ],
+        ),
+      ],
+    );
+  }
+
+  Widget _cardCollection(BuildContext context) {
+    return Container(
+      margin: const EdgeInsets.all(5),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: const Image(
+          width: 350,
+          height: 217.59,
+          fit: BoxFit.cover,
+          image: NetworkImage(
+              "https://firebasestorage.googleapis.com/v0/b/delivery-app-4c9cb.appspot.com/o/photo-1551024506-0bccd828d307%20(1).jpeg?alt=media&token=deb8f4d1-2285-4bc0-83ca-edf56c4d80ae"),
+        ),
       ),
     );
   }

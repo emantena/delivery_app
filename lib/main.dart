@@ -1,4 +1,3 @@
-// @dart=2.9
 import 'package:delivery_app/src/routes/app_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,12 +8,10 @@ import 'src/colors/app_color.dart';
 // Routes
 
 void main() {
-  runApp(const DeliveryApp());
+  runApp(DeliveryApp());
 }
 
 class DeliveryApp extends StatelessWidget {
-  const DeliveryApp({Key key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(

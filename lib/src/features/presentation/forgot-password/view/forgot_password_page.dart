@@ -1,12 +1,18 @@
+import 'package:delivery_app/src/features/presentation/widgets/alert_dialog.dart';
 import 'package:flutter/material.dart';
 import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 
 import '../../../../colors/app_color.dart';
 import '../../widgets/back_button.dart';
 
-class ForgotPasswordPage extends StatelessWidget {
+class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
 
+  @override
+  State<ForgotPasswordPage> createState() => _ForgotPasswordPageState();
+}
+
+class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -92,86 +98,18 @@ class ForgotPasswordPage extends StatelessWidget {
           ),
         ),
         onPressed: () {
-          _showAlert(context);
+          alertDialog(
+              context: context,
+              imagePath: const AssetImage('assets/icons/lock.png'),
+              title: "Your password has been reset",
+              subTitle: "You'll shortly receive an email with a code to setup a new password",
+              labelButton: "Done",
+              pressed: () {
+                Navigator.pushNamed(context, 'login');
+              });
         },
         child: const Text(
           'Send',
-          style: TextStyle(
-            fontSize: 17,
-          ),
-        ),
-      ),
-    );
-  }
-
-  void _showAlert(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: ((BuildContext context) {
-        return AlertDialog(
-          shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
-          ),
-          content: SizedBox(
-            height: 350,
-            child: Column(
-              children: [
-                const Image(
-                  image: AssetImage('assets/icons/lock.png'),
-                  width: 130,
-                  height: 130,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                headerText(
-                  text: "Your password has been reset",
-                  fontSize: 20,
-                  color: AppColor.primary,
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                const Text(
-                  "You'll shortly receive an email with a code to setup a new password",
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 15,
-                  ),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                _doneButton(context),
-              ],
-            ),
-          ),
-        );
-      }),
-    );
-  }
-
-  Widget _doneButton(BuildContext context) {
-    return Container(
-      width: 350,
-      height: 45,
-      margin: const EdgeInsets.only(top: 30),
-      child: ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(
-            Theme.of(context).colorScheme.secondary,
-          ),
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-          ),
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, 'login');
-        },
-        child: const Text(
-          'Done',
           style: TextStyle(
             fontSize: 17,
           ),

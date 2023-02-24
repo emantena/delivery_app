@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/widgets/alert_dialog.dart';
 import 'package:flutter/material.dart';
 
 import 'package:delivery_app/src/colors/app_color.dart';
@@ -15,8 +16,16 @@ class TabNavigation extends StatefulWidget {
 }
 
 class _TabNavigationState extends State<TabNavigation> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      _getLocation(context);
+    });
+  }
+
   final List<Widget> _pageItems = [
-    ExploreTab(),
+    const ExploreTab(),
     OrderPage(),
     FavoritePage(),
     ProfilePage(),
@@ -66,6 +75,17 @@ class _TabNavigationState extends State<TabNavigation> {
           label: "Profile",
         ),
       ],
+    );
+  }
+
+  Future _getLocation(BuildContext context) async {
+    alertDialog(
+      context: context,
+      imagePath: const AssetImage("assets/icons/location.png"),
+      title: "Enable Your Location",
+      subTitle: "Please allow to use your location to show nearby restaurant on the map",
+      labelButton: "Enable location",
+      pressed: () {},
     );
   }
 }

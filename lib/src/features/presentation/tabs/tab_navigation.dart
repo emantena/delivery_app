@@ -12,10 +12,10 @@ class TabNavigation extends StatefulWidget {
   const TabNavigation({Key? key}) : super(key: key);
 
   @override
-  _TabNavigationState createState() => _TabNavigationState();
+  TabNavigationState createState() => TabNavigationState();
 }
 
-class _TabNavigationState extends State<TabNavigation> {
+class TabNavigationState extends State<TabNavigation> {
   @override
   void initState() {
     super.initState();
@@ -26,9 +26,9 @@ class _TabNavigationState extends State<TabNavigation> {
 
   final List<Widget> _pageItems = [
     const ExploreTab(),
-    OrderPage(),
-    FavoritePage(),
-    ProfilePage(),
+    const OrderPage(),
+    const FavoritePage(),
+    const ProfilePage(),
   ];
 
   int _selectedItem = 0;

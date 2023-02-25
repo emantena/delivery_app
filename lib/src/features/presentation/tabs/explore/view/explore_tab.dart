@@ -9,10 +9,10 @@ class ExploreTab extends StatefulWidget {
   const ExploreTab({super.key});
 
   @override
-  _ExploreTabState createState() => _ExploreTabState();
+  ExploreTabState createState() => ExploreTabState();
 }
 
-class _ExploreTabState extends State<ExploreTab> {
+class ExploreTabState extends State<ExploreTab> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -70,52 +70,57 @@ class _ExploreTabState extends State<ExploreTab> {
   }
 
   Widget _topBar(BuildContext context) {
-    return Row(
-      children: [
-        Padding(
-          padding: const EdgeInsets.all(20.0),
-          child: Container(
-            width: 310,
-            padding: const EdgeInsets.all(10),
-            decoration: BoxDecoration(
-              border: Border.all(
-                color: const Color.fromRGBO(234, 236, 239, 1),
+    return GestureDetector(
+      onTap: () {
+        Navigator.pushNamed(context, 'search-page');
+      },
+      child: Row(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Container(
+              width: 310,
+              padding: const EdgeInsets.all(10),
+              decoration: BoxDecoration(
+                border: Border.all(
+                  color: const Color.fromRGBO(234, 236, 239, 1),
+                ),
+                borderRadius: BorderRadius.circular(10),
               ),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            child: Row(
-              children: [
-                Icon(
-                  Icons.search,
-                  color: AppColor.disabledColor,
-                ),
-                Container(
-                  margin: const EdgeInsets.only(left: 10),
-                  child: const Text(
-                    'Search',
+              child: Row(
+                children: [
+                  Icon(
+                    Icons.search,
+                    color: AppColor.disabledColor,
                   ),
-                ),
-              ],
+                  Container(
+                    margin: const EdgeInsets.only(left: 10),
+                    child: const Text(
+                      'Search',
+                    ),
+                  ),
+                ],
+              ),
             ),
           ),
-        ),
-        Container(
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-            color: const Color.fromRGBO(209, 209, 214, 1),
-            borderRadius: BorderRadius.circular(25),
-          ),
-          child: IconButton(
-            icon: const Icon(
-              Icons.filter_list,
-              color: Colors.white,
-              size: 25,
+          Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: const Color.fromRGBO(209, 209, 214, 1),
+              borderRadius: BorderRadius.circular(25),
             ),
-            onPressed: () {},
+            child: IconButton(
+              icon: const Icon(
+                Icons.filter_list,
+                color: Colors.white,
+                size: 25,
+              ),
+              onPressed: () {},
+            ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 

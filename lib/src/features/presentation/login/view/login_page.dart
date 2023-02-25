@@ -167,31 +167,4 @@ class LoginPage extends StatelessWidget {
       ),
     );
   }
-
-  Widget _loginButton(BuildContext context) {
-    return Container(
-      width: 350,
-      height: 45,
-      margin: const EdgeInsets.only(top: 30),
-      child: ElevatedButton(
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(AppColor.secondary),
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(20),
-            ),
-          ),
-        ),
-        onPressed: () {
-          Navigator.pushNamed(context, 'tabs');
-        },
-        child: const Text(
-          'Login',
-          style: TextStyle(
-            fontSize: 17,
-          ),
-        ),
-      ),
-    );
-  }
 }

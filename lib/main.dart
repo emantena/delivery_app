@@ -8,10 +8,12 @@ import 'src/colors/app_color.dart';
 // Routes
 
 void main() {
-  runApp(DeliveryApp());
+  runApp(const DeliveryApp());
 }
 
 class DeliveryApp extends StatelessWidget {
+  const DeliveryApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setSystemUIOverlayStyle(

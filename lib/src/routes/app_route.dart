@@ -5,6 +5,7 @@ import 'package:delivery_app/src/features/presentation/forgot-password/view/forg
 import 'package:delivery_app/src/features/presentation/login/view/login_page.dart';
 import 'package:delivery_app/src/features/presentation/welcome/view/welcome_page.dart';
 import 'package:delivery_app/src/features/presentation/sign-up/view/sign_up_page.dart';
+import 'package:delivery_app/src/features/presentation/search/view/search_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/tab_navigation.dart';
 
 final appRoute = <String, WidgetBuilder>{
@@ -12,5 +13,6 @@ final appRoute = <String, WidgetBuilder>{
   "login": (BuildContext context) => const LoginPage(),
   "forgot-password": (context) => const ForgotPasswordPage(),
   "sign-up": (context) => const SignUpPage(),
+  "search-page": (context) => const SearchPage(),
   "tabs": (context) => const TabNavigation(),
 };

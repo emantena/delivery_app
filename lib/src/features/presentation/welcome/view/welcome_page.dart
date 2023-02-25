@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
@@ -49,54 +50,23 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(
-                width: 350,
-                height: 45,
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(
-                      Theme.of(context).colorScheme.secondary,
-                    ),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.pushNamed(context, 'login');
-                  },
-                  child: const Text('Login'),
-                ),
+              roundedButton(
+                pressed: () {
+                  Navigator.pushNamed(context, 'login');
+                },
+                text: "Login",
+                fontSize: 17,
+                color: AppColor.secondary,
               ),
-              Container(
-                width: 350,
-                height: 45,
-                margin: const EdgeInsets.only(top: 20),
-                child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(AppColor.blue),
-                    shape: MaterialStateProperty.all(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Image(
-                        image: AssetImage('assets/icons/facebook.png'),
-                        width: 18,
-                        height: 18,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(left: 10),
-                        child: const Text('Connect with Facebook'),
-                      ),
-                    ],
-                  ),
+              roundedButton(
+                pressed: () {},
+                text: "Connect with Facebook",
+                fontSize: 17,
+                color: AppColor.blue,
+                image: const Image(
+                  image: AssetImage('assets/icons/facebook.png'),
+                  width: 18,
+                  height: 18,
                 ),
               ),
             ],

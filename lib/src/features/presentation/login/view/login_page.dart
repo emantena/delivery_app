@@ -1,4 +1,5 @@
 import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
+import 'package:delivery_app/src/features/presentation/widgets/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -64,7 +65,15 @@ class LoginPage extends StatelessWidget {
                       ),
                       _emailInput(),
                       _passwordInput(),
-                      _loginButton(context),
+                      roundedButton(
+                        pressed: () {
+                          Navigator.pushNamed(context, 'tabs');
+                        },
+                        text: "Login",
+                        fontSize: 20,
+                        color: AppColor.secondary,
+                      ),
+                      // _loginButton(context),
                       Container(
                         margin: const EdgeInsets.only(top: 20),
                         child: GestureDetector(

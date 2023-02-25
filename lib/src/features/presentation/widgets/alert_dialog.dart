@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../../colors/app_color.dart';
-import 'button.dart';
+import 'package:delivery_app/src/colors/app_color.dart';
 import 'header_text.dart';
+import 'rounded_button.dart';
 
 Future alertDialog({
   required BuildContext context,
@@ -49,10 +49,12 @@ Future alertDialog({
               const SizedBox(
                 height: 20,
               ),
-              button(
+              roundedButton(
                 fontSize: 17,
                 pressed: pressed,
                 text: "Done",
+                color: AppColor.secondary,
+                width: 100,
               ),
             ],
           ),

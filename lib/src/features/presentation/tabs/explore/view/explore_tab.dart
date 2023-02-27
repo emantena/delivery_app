@@ -72,7 +72,7 @@ class ExploreTabState extends State<ExploreTab> {
   Widget _topBar(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, 'search-page');
+        Navigator.pushNamed(context, 'search');
       },
       child: Row(
         children: [
@@ -116,7 +116,9 @@ class ExploreTabState extends State<ExploreTab> {
                 color: Colors.white,
                 size: 25,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, 'filter');
+              },
             ),
           ),
         ],

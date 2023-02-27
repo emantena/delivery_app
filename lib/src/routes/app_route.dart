@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/filter/view/filter_page.dart';
 import 'package:flutter/material.dart';
 
 // Pages
@@ -13,6 +14,7 @@ final appRoute = <String, WidgetBuilder>{
   "login": (BuildContext context) => const LoginPage(),
   "forgot-password": (context) => const ForgotPasswordPage(),
   "sign-up": (context) => const SignUpPage(),
-  "search-page": (context) => const SearchPage(),
+  "search": (context) => const SearchPage(),
+  "filter": (context) => const FilterPage(),
   "tabs": (context) => const TabNavigation(),
 };

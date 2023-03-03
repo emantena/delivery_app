@@ -62,7 +62,8 @@ Widget _restaurantCard(BuildContext context) {
                   fit: BoxFit.cover,
                   width: 95,
                   height: 100,
-                  image: NetworkImage("https://images.unsplash.com/photo-1432139509613-5c4255815697"),
+                  image: NetworkImage(
+                      "https://images.unsplash.com/photo-1432139509613-5c4255815697"),
                 ),
               ),
             ),
@@ -110,8 +111,10 @@ Widget _restaurantCard(BuildContext context) {
                       child: ElevatedButton(
                         onPressed: () {},
                         style: ButtonStyle(
-                          elevation: const MaterialStatePropertyAll<double>(0.5),
-                          backgroundColor: MaterialStatePropertyAll<Color>(AppColor.secondary),
+                          elevation:
+                              const MaterialStatePropertyAll<double>(0.5),
+                          backgroundColor: MaterialStatePropertyAll<Color>(
+                              AppColor.secondary),
                         ),
                         child: const Text(
                           "Delivered",

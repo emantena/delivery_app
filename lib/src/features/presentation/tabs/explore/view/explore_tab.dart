@@ -40,8 +40,8 @@ class ExploreTabState extends State<ExploreTab> {
                     textHeader: "Popular this week",
                     gestureDetector: GestureDetector(
                       onTap: () {},
-                      child: Row(
-                        children: const [
+                      child: const Row(
+                        children: [
                           Text(
                             'Show all',
                             style: TextStyle(
@@ -212,7 +212,8 @@ class ExploreTabState extends State<ExploreTab> {
                       onPressed: () {},
                       style: ButtonStyle(
                         elevation: const MaterialStatePropertyAll<double>(0.5),
-                        backgroundColor: MaterialStatePropertyAll<Color>(AppColor.secondary),
+                        backgroundColor:
+                            MaterialStatePropertyAll<Color>(AppColor.secondary),
                       ),
                       child: const Text(
                         "Delivered",
@@ -248,13 +249,18 @@ class ExploreTabState extends State<ExploreTab> {
             GestureDetector(
               onTap: () {},
               child: Row(
-                children: const [
-                  Text(
-                    'Show all',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.bold,
-                      fontSize: 15,
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'collection');
+                    },
+                    child: const Text(
+                      'Show all',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
                     ),
                   ),
                   Icon(Icons.play_arrow),

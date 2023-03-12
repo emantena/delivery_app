@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:delivery_app/src/features/presentation/widgets/BackButtons/back_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/back_buttons/back_button.dart';
 import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 
 class CollectionsPage extends StatelessWidget {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:delivery_app/src/features/presentation/widgets/Buttons/rounded_button.dart';
-import 'package:delivery_app/src/features/presentation/widgets/Cards/populares_card.dart';
+import 'package:delivery_app/src/features/presentation/widgets/buttons/rounded_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/cards/populares_card.dart';
 import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 
 import 'package:delivery_app/src/colors/app_color.dart';

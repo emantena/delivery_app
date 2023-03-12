@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:delivery_app/src/features/presentation/widgets/Alerts/alert_dialog.dart';
-import 'package:delivery_app/src/features/presentation/widgets/Buttons/rounded_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/alerts/alert_dialog.dart';
+import 'package:delivery_app/src/features/presentation/widgets/buttons/rounded_button.dart';
 import 'package:delivery_app/src/features/presentation/tabs/explore/view/explore_tab.dart';
 import 'package:delivery_app/src/features/presentation/tabs/favorite/favorite_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/order/order_page.dart';

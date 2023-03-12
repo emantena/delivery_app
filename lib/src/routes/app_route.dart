@@ -1,3 +1,4 @@
+import 'package:delivery_app/src/features/presentation/place-detail/view/place_detail_page.dart';
 import 'package:flutter/material.dart';
 
 // Pages
@@ -20,5 +21,6 @@ final appRoute = <String, WidgetBuilder>{
   "filter": (context) => const FilterPage(),
   "collection": (context) => const CollectionsPage(),
   "collection-detail": (context) => const CollectionDetailPage(),
+  "place-detail": (context) => const PlaceDetailPage(),
   "tabs": (context) => const TabNavigation(),
 };

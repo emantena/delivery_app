@@ -1,9 +1,10 @@
-import 'package:delivery_app/src/features/presentation/widgets/alert_dialog.dart';
 import 'package:flutter/material.dart';
-import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 
-import '../../../../colors/app_color.dart';
-import '../../widgets/back_button.dart';
+import 'package:delivery_app/src/colors/app_color.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Alerts/alert_dialog.dart';
+import 'package:delivery_app/src/features/presentation/widgets/BackButtons/back_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Buttons/rounded_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 
 class ForgotPasswordPage extends StatefulWidget {
   const ForgotPasswordPage({super.key});
@@ -98,15 +99,20 @@ class _ForgotPasswordPageState extends State<ForgotPasswordPage> {
           ),
         ),
         onPressed: () {
-          alertDialog(
+          showAlertDialog(
+            context: context,
+            imagePath: const AssetImage('assets/icons/lock.png'),
+            headerTitle: "Your password has been reset",
+            headerSubTitle: "You'll shortly receive an email with a code to setup a new password",
+            doneButton: createButton(
               context: context,
-              imagePath: const AssetImage('assets/icons/lock.png'),
-              title: "Your password has been reset",
-              subTitle: "You'll shortly receive an email with a code to setup a new password",
-              labelButton: "Done",
-              pressed: () {
+              labelButton: 'Done',
+              buttonColor: AppColor.orange,
+              func: () {
                 Navigator.pushNamed(context, 'login');
-              });
+              },
+            ),
+          );
         },
         child: const Text(
           'Send',

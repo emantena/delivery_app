@@ -1,9 +1,8 @@
-import 'package:delivery_app/src/features/presentation/widgets/rounded_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Buttons/rounded_button.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
-
-import '../../../../colors/app_color.dart';
-import '../../widgets/header_text.dart';
+import 'package:delivery_app/src/colors/app_color.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
@@ -50,27 +49,28 @@ class WelcomePage extends StatelessWidget {
                   ),
                 ),
               ),
-              roundedButton(
-                pressed: () {
+              createButton(
+                context: context,
+                func: () {
                   Navigator.pushNamed(context, 'login');
                 },
-                text: "Login",
-                fontSize: 17,
-                color: AppColor.secondary,
+                labelButton: "Login",
+                labelFontSize: 17,
+                buttonColor: AppColor.secondary,
               ),
-              roundedButton(
-                pressed: () {},
-                text: "Connect with Facebook",
-                fontSize: 17,
-                color: AppColor.blue,
-                image: const Image(
-                  image: AssetImage('assets/icons/facebook.png'),
-                  width: 18,
-                  height: 18,
-                ),
+              createButton(
+                context: context,
+                func: () {
+                  Navigator.pushNamed(context, 'login');
+                },
+                labelButton: "Connect with Facebook",
+                labelFontSize: 17,
+                buttonColor: AppColor.fbButtonColor,
+                isWithIcon: true,
+                icon: const AssetImage('assets/icons/facebook.png'),
               ),
             ],
-          )
+          ),
         ],
       ),
     );

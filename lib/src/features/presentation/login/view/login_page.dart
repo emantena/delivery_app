@@ -1,10 +1,9 @@
-import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
-import 'package:delivery_app/src/features/presentation/widgets/rounded_button.dart';
+import 'package:delivery_app/src/colors/app_color.dart';
+import 'package:delivery_app/src/features/presentation/widgets/BackButtons/back_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Buttons/rounded_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-
-import '../../../../colors/app_color.dart';
-import '../../widgets/back_button.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -65,13 +64,13 @@ class LoginPage extends StatelessWidget {
                       ),
                       _emailInput(),
                       _passwordInput(),
-                      roundedButton(
-                        pressed: () {
+                      createButton(
+                        context: context,
+                        labelButton: "Login",
+                        buttonColor: AppColor.orange,
+                        func: () {
                           Navigator.pushNamed(context, 'tabs');
                         },
-                        text: "Login",
-                        fontSize: 20,
-                        color: AppColor.secondary,
                       ),
                       // _loginButton(context),
                       Container(

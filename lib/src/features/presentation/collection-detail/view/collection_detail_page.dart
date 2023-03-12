@@ -1,98 +1,102 @@
+import 'package:delivery_app/src/features/presentation/widgets/BackButtons/back_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 import 'package:flutter/material.dart';
-import 'package:delivery_app/src/features/presentation/widgets/back_button.dart';
-import 'package:delivery_app/src/features/presentation/widgets/restaurant_card.dart';
 
-import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
+import 'package:delivery_app/src/colors/app_color.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Cards/favourites_card.dart';
 
 class CollectionDetailPage extends StatelessWidget {
-  const CollectionDetailPage({Key? key}) : super(key: key);
+  const CollectionDetailPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        slivers: [
+        slivers: <Widget>[
           SliverAppBar(
-            pinned: true,
             expandedHeight: 230,
-            backgroundColor: Colors.white,
+            backgroundColor: AppColor.orange,
             flexibleSpace: FlexibleSpaceBar(
               background: Stack(
                 children: [
                   const Image(
-                    fit: BoxFit.cover,
-                    width: double.infinity,
-                    image: NetworkImage(
-                      "https://images.unsplash.com/photo-1574164052277-b9ea797de8e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-                    ),
-                  ),
+                      width: double.infinity,
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                          'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60')),
                   Container(
-                    decoration: const BoxDecoration(
-                      color: Color.fromRGBO(0, 0, 0, 1.3),
+                    // color: const Color.fromRGBO(0, 0, 0, 1.3),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
                     ),
                     width: double.infinity,
                     height: double.infinity,
                   ),
                   Center(
                     child: headerText(
-                        text: "Asia \n Restaurant",
+                        text: 'Asia \n Restaurant',
                         color: Colors.white,
-                        fontSize: 35,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 35.0,
                         textAlign: TextAlign.center),
                   )
                 ],
               ),
             ),
-            leading: Builder(
-              builder: (BuildContext context) {
-                return backButton(context: context, color: Colors.white);
-              },
-            ),
+            leading: Builder(builder: (BuildContext context) {
+              return backButton(context: context, color: Colors.white);
+            }),
           ),
           SliverList(
             delegate: SliverChildListDelegate(
               [
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  child: Container(
-                    alignment: Alignment.topLeft,
-                    margin: const EdgeInsets.symmetric(vertical: 20),
-                    child: headerText(
-                      text: '128 places',
-                      color: const Color.fromRGBO(51, 58, 77, 1.8),
-                      fontSize: 17,
-                      weight: FontWeight.w600,
-                    ),
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: Column(
+                    children: [
+                      Container(
+                        alignment: Alignment.topLeft,
+                        margin: const EdgeInsets.symmetric(vertical: 20.0),
+                        child: headerText(
+                          text: '128 places',
+                          color: const Color.fromRGBO(51, 58, 77, 1.0),
+                          fontWeight: FontWeight.w600,
+                          fontSize: 17,
+                        ),
+                      ),
+                      Column(
+                        children: [
+                          favouritesCard(
+                              context: context,
+                              image: const NetworkImage(
+                                  'https://images.unsplash.com/photo-1529417305485-480f579e7578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
+                              title: "Andy & Cindy's Diners",
+                              subtitle: "87 Botsford Circle Apt",
+                              review: "4.8",
+                              ratings: "(233 ratings)",
+                              buttonText: 'Delivery',
+                              hasActionButton: true,
+                              isFavourite: true),
+                          favouritesCard(
+                            context: context,
+                            image: const NetworkImage(
+                                'https://images.unsplash.com/photo-1529417305485-480f579e7578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
+                            title: "Andy & Cindy's Diner",
+                            subtitle: "87 Botsford Circle Apt",
+                            review: "4.8",
+                            ratings: "(233 ratings)",
+                            buttonText: 'Delivery',
+                            hasActionButton: true,
+                            isFavourite: false,
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
-                ),
-                Column(
-                  children: [
-                    restaurantCard(
-                      context: context,
-                      image: const NetworkImage(
-                          "https://images.unsplash.com/photo-1432139509613-5c4255815697"),
-                      title: "Restaurant name",
-                      subtitle: "some text",
-                      review: "",
-                      ratings: "(235 ratings)",
-                      buttonText: "Delivered",
-                    ),
-                    restaurantCard(
-                      context: context,
-                      image: const NetworkImage(
-                          "https://images.unsplash.com/photo-1432139509613-5c4255815697"),
-                      title: "Restaurant name",
-                      subtitle: "some text",
-                      review: "",
-                      ratings: "(235 ratings)",
-                      buttonText: "Delivered",
-                      isFavourite: true,
-                    ),
-                  ],
                 ),
               ],
             ),
-          ),
+          )
         ],
       ),
     );

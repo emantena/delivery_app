@@ -18,7 +18,7 @@ final appRoute = <String, WidgetBuilder>{
   "sign-up": (context) => const SignUpPage(),
   "search": (context) => const SearchPage(),
   "filter": (context) => const FilterPage(),
-  "collection": (context) => const CollectionPage(),
+  "collection": (context) => const CollectionsPage(),
   "collection-detail": (context) => const CollectionDetailPage(),
   "tabs": (context) => const TabNavigation(),
 };

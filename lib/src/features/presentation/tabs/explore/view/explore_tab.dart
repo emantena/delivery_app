@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
-import 'package:delivery_app/src/features/presentation/widgets/list_restaurant.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Buttons/rounded_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Cards/populares_card.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 
 import 'package:delivery_app/src/colors/app_color.dart';
 
-class ExploreTab extends StatefulWidget {
-  const ExploreTab({super.key});
+class ExploreTab extends StatelessWidget {
+  const ExploreTab({Key? key}) : super(key: key);
 
-  @override
-  ExploreTabState createState() => ExploreTabState();
-}
-
-class ExploreTabState extends State<ExploreTab> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -21,162 +17,195 @@ class ExploreTabState extends State<ExploreTab> {
           SliverList(
             delegate: SliverChildListDelegate(
               [
-                _topBar(context),
                 Container(
-                  padding: const EdgeInsets.all(10),
-                  child: headerText(
-                    text: "Discovery new places",
-                    color: AppColor.primary,
-                    fontSize: 32,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 15,
                   ),
-                ),
-                Container(
-                  child: _sliderCard(),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(16),
-                  child: listRestaurants(
-                    context: context,
-                    textHeader: "Popular this week",
-                    gestureDetector: GestureDetector(
-                      onTap: () {},
-                      child: const Row(
-                        children: [
-                          Text(
-                            'Show all',
-                            style: TextStyle(
-                              color: Colors.black,
-                              fontWeight: FontWeight.bold,
-                              fontSize: 15,
-                            ),
-                          ),
-                          Icon(Icons.play_arrow),
-                        ],
+                  child: Column(
+                    children: [
+                      _topBar(context),
+                      Container(
+                        margin: const EdgeInsets.symmetric(vertical: 20.0),
+                        alignment: Alignment.centerLeft,
+                        child: headerText(
+                          text: 'Discover new places',
+                          color: Colors.black,
+                          fontSize: 30.0,
+                        ),
                       ),
-                    ),
+                      _sliderCards(),
+                      _headers(
+                        context,
+                        "Popular this week",
+                        "Show all",
+                      ),
+                      popularCard(
+                        context: context,
+                        image: const NetworkImage(
+                            'https://images.unsplash.com/photo-1529417305485-480f579e7578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
+                        title: "Andy & Cindy's Diner",
+                        subtitle: "87 Botsford Circle Apt",
+                        review: "4.8",
+                        ratings: "(233 ratings)",
+                        buttonText: 'Delivery',
+                        hasActionButton: true,
+                      ),
+                      popularCard(
+                        context: context,
+                        image: const NetworkImage(
+                            'https://images.unsplash.com/photo-1529417305485-480f579e7578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
+                        title: "Andy & Cindy's Diner",
+                        subtitle: "87 Botsford Circle Apt",
+                        review: "4.8",
+                        ratings: "(233 ratings)",
+                        buttonText: 'Delivery',
+                        hasActionButton: true,
+                      ),
+                      popularCard(
+                        context: context,
+                        image: const NetworkImage(
+                            'https://images.unsplash.com/photo-1529417305485-480f579e7578?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
+                        title: "Andy & Cindy's Diner",
+                        subtitle: "87 Botsford Circle Apt",
+                        review: "4.8",
+                        ratings: "(233 ratings)",
+                        buttonText: 'Delivery',
+                        hasActionButton: true,
+                      ),
+                      const SizedBox(height: 10.0),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.pushNamed(context, 'collection');
+                        },
+                        child: _headers(context, "Collections", "Show all"),
+                      ),
+                      _sliderCollections(),
+                    ],
                   ),
                 ),
-                Container(
-                  padding: const EdgeInsets.all(10),
-                  child: _sliderCollection(),
-                ),
-                const SizedBox(height: 30)
               ],
             ),
-          ),
+          )
         ],
       ),
     );
   }
+}
 
-  Widget _topBar(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, 'search');
-      },
-      child: Row(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: Container(
-              width: 310,
-              padding: const EdgeInsets.all(10),
-              decoration: BoxDecoration(
-                border: Border.all(
-                  color: const Color.fromRGBO(234, 236, 239, 1),
+Widget _topBar(BuildContext context) {
+  return Row(
+    children: [
+      GestureDetector(
+        onTap: () => Navigator.pushNamed(context, 'search'),
+        child: Container(
+          width: 320,
+          padding: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.only(left: 16),
+          decoration: BoxDecoration(
+            border: Border.all(
+              color: const Color.fromRGBO(234, 236, 239, 1.0),
+            ),
+            borderRadius: BorderRadius.circular(20.0),
+          ),
+          child: Row(
+            children: [
+              Icon(
+                Icons.search,
+                size: 20.0,
+                color: AppColor.grey,
+              ),
+              Container(
+                margin: const EdgeInsets.only(left: 5),
+                child: Text(
+                  'Search',
+                  style: TextStyle(
+                    color: AppColor.grey,
+                    fontSize: 17.0,
+                  ),
                 ),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Row(
-                children: [
-                  Icon(
-                    Icons.search,
-                    color: AppColor.disabledColor,
-                  ),
-                  Container(
-                    margin: const EdgeInsets.only(left: 10),
-                    child: const Text(
-                      'Search',
-                    ),
-                  ),
-                ],
-              ),
-            ),
+              )
+            ],
           ),
-          Container(
-            width: 40,
-            height: 40,
-            decoration: BoxDecoration(
-              color: const Color.fromRGBO(209, 209, 214, 1),
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: IconButton(
-              icon: const Icon(
-                Icons.filter_list,
-                color: Colors.white,
-                size: 25,
-              ),
-              onPressed: () {
-                Navigator.pushNamed(context, 'filter');
-              },
-            ),
+        ),
+      ),
+      Container(
+        width: 45.0,
+        height: 45.0,
+        margin: const EdgeInsets.only(left: 10),
+        decoration: BoxDecoration(
+          color: const Color.fromRGBO(209, 209, 214, 1.0),
+          borderRadius: BorderRadius.circular(30),
+        ),
+        child: IconButton(
+          icon: const Icon(
+            Icons.filter_list,
+            size: 30,
+            color: Colors.white,
           ),
-        ],
-      ),
-    );
-  }
+          onPressed: () {
+            Navigator.pushNamed(context, 'filter');
+          },
+        ),
+      )
+    ],
+  );
+}
 
-  Widget _sliderCard() {
-    return SizedBox(
-      height: 325,
-      child: ListView.builder(
-        padding: const EdgeInsets.only(left: 25),
-        physics: const BouncingScrollPhysics(),
-        scrollDirection: Axis.horizontal,
-        itemCount: 4,
-        itemBuilder: ((context, index) {
-          return _card(context);
-        }),
-      ),
-    );
-  }
+Widget _sliderCards() {
+  return SizedBox(
+    height: 350.0,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (BuildContext context, int index) {
+        return _card(context);
+      },
+    ),
+  );
+}
 
-  Widget _card(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(5),
+Widget _card(BuildContext context) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, 'place-detail');
+    },
+    child: Container(
+      margin: const EdgeInsets.all(5.0),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(20),
             child: const Image(
-              width: 200,
-              height: 250,
+              width: 210.0,
+              height: 250.0,
               fit: BoxFit.cover,
               image: NetworkImage(
-                  "https://firebasestorage.googleapis.com/v0/b/delivery-app-4c9cb.appspot.com/o/photo-1565299585323-38d6b0865b47%20(1).jpeg?alt=media&token=7b15b760-b60e-46e2-b370-57b30dc05403"),
+                'https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8Zm9vZHxlbnwwfDF8MHw%3D&auto=format&fit=crop&w=500&q=60',
+              ),
             ),
           ),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Container(
-                margin: const EdgeInsets.only(top: 10),
+                margin: const EdgeInsets.only(top: 10.0),
                 child: const Text(
-                  "Store Name Here",
+                  "Andy & Cindy's Diner",
                   style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.bold,
-                    fontSize: 17,
+                    fontSize: 17.0,
                   ),
                 ),
               ),
               Container(
                 alignment: Alignment.centerLeft,
                 child: Text(
-                  "some texte here",
+                  "87 Botsford Circle Apt",
                   style: TextStyle(
-                    color: AppColor.disabledColor,
+                    color: AppColor.grey,
+                    fontWeight: FontWeight.w500,
+                    fontSize: 13.0,
                   ),
                 ),
               ),
@@ -184,7 +213,7 @@ class ExploreTabState extends State<ExploreTab> {
                 children: [
                   Icon(
                     Icons.star,
-                    color: AppColor.secondary,
+                    color: AppColor.yellow,
                     size: 16,
                   ),
                   const Text(
@@ -192,35 +221,26 @@ class ExploreTabState extends State<ExploreTab> {
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
-                      fontSize: 13,
+                      fontSize: 13.0,
                     ),
                   ),
                   Text(
-                    "(235 ratings)",
+                    "(233 ratings)",
                     style: TextStyle(
-                      color: AppColor.disabledColor,
-                      fontSize: 13,
+                      color: AppColor.grey,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 13.0,
                     ),
                   ),
                   Container(
-                    width: 80,
-                    height: 18,
-                    margin: const EdgeInsets.symmetric(
-                      horizontal: 5,
-                    ),
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      style: ButtonStyle(
-                        elevation: const MaterialStatePropertyAll<double>(0.5),
-                        backgroundColor:
-                            MaterialStatePropertyAll<Color>(AppColor.secondary),
-                      ),
-                      child: const Text(
-                        "Delivered",
-                        style: TextStyle(
-                          fontSize: 11,
-                        ),
-                      ),
+                    margin: const EdgeInsets.symmetric(horizontal: 5.0),
+                    width: 80.0,
+                    height: 18.0,
+                    child: createButton(
+                      context: context,
+                      buttonColor: AppColor.orange,
+                      labelButton: 'Delivery',
+                      labelFontSize: 11.0,
                     ),
                   )
                 ],
@@ -229,79 +249,73 @@ class ExploreTabState extends State<ExploreTab> {
           )
         ],
       ),
-    );
-  }
+    ),
+  );
+}
 
-  Widget _sliderCollection() {
-    return Column(
-      children: [
-        Row(
-          children: [
-            Container(
-              alignment: Alignment.centerLeft,
-              child: headerText(
-                text: "Collection",
-                color: AppColor.primary,
-                fontSize: 20,
-              ),
-            ),
-            const Spacer(),
-            GestureDetector(
-              onTap: () {},
-              child: Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushNamed(context, 'collection');
-                    },
-                    child: const Text(
-                      'Show all',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 15,
-                      ),
-                    ),
-                  ),
-                  Icon(Icons.play_arrow),
-                ],
-              ),
-            ),
-          ],
-        ),
-        Column(
-          children: [
-            SizedBox(
-              height: 200,
-              child: ListView.builder(
-                padding: const EdgeInsets.only(left: 25),
-                physics: const BouncingScrollPhysics(),
-                scrollDirection: Axis.horizontal,
-                itemCount: 4,
-                itemBuilder: ((context, index) {
-                  return _cardCollection(context);
-                }),
-              ),
-            ),
-          ],
-        ),
-      ],
-    );
-  }
-
-  Widget _cardCollection(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(5),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: const Image(
-          width: 350,
-          height: 217.59,
-          fit: BoxFit.cover,
-          image: NetworkImage(
-              "https://firebasestorage.googleapis.com/v0/b/delivery-app-4c9cb.appspot.com/o/photo-1551024506-0bccd828d307%20(1).jpeg?alt=media&token=deb8f4d1-2285-4bc0-83ca-edf56c4d80ae"),
+Widget _headers(
+  BuildContext context,
+  String textHeader,
+  String textAction,
+) {
+  return Row(
+    children: [
+      Container(
+        alignment: Alignment.centerLeft,
+        child: headerText(
+          text: textHeader,
+          fontSize: 20.0,
         ),
       ),
-    );
-  }
+      const Spacer(),
+      GestureDetector(
+        child: Row(
+          children: [
+            Text(
+              textAction,
+              style: const TextStyle(
+                color: Colors.black,
+                fontWeight: FontWeight.w500,
+                fontSize: 15.0,
+              ),
+            ),
+            const Icon(Icons.play_arrow)
+          ],
+        ),
+      ),
+    ],
+  );
+}
+
+Widget _sliderCollections() {
+  return SizedBox(
+    height: 180.0,
+    child: ListView.builder(
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (BuildContext context, int index) {
+        return _cardCollection(context);
+      },
+    ),
+  );
+}
+
+Widget _cardCollection(BuildContext context) {
+  return Container(
+    margin: const EdgeInsets.all(10.0),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(20.0),
+          child: const Image(
+            width: 300,
+            height: 150,
+            fit: BoxFit.cover,
+            image: NetworkImage(
+                'https://images.unsplash.com/photo-1581546104493-f7e013a136ba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
+          ),
+        ),
+      ],
+    ),
+  );
 }

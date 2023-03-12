@@ -1,66 +1,53 @@
-import 'package:delivery_app/src/features/presentation/widgets/back_button.dart';
 import 'package:flutter/material.dart';
 
-import 'package:delivery_app/src/colors/app_color.dart';
-import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
+import 'package:delivery_app/src/features/presentation/widgets/BackButtons/back_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 
-class CollectionPage extends StatelessWidget {
-  const CollectionPage({Key? key}) : super(key: key);
+class CollectionsPage extends StatelessWidget {
+  const CollectionsPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomScrollView(
-        slivers: [
+        slivers: <Widget>[
           SliverAppBar(
             backgroundColor: Colors.white,
-            centerTitle: true,
             title: headerText(
-              text: "Collections",
-              color: AppColor.primary,
+              text: 'Collections',
               fontSize: 17,
             ),
-            leading: backButton(
-              context: context,
-              color: Colors.black,
+            leading: Builder(
+              builder: (BuildContext context) {
+                return backButton(context: context, color: Colors.black);
+              },
             ),
           ),
           SliverPadding(
-            padding: const EdgeInsets.only(left: 20),
+            padding: const EdgeInsets.only(
+              left: 30.0,
+              right: 20.0,
+            ),
             sliver: SliverGrid.count(
               crossAxisCount: 2,
-              mainAxisSpacing: 10,
+              mainAxisSpacing: 10.0,
               children: [
-                _card(
-                  context,
-                  "https://images.unsplash.com/photo-1574164052277-b9ea797de8e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-                  "Asia",
-                  "128 places",
-                ),
-                _card(
-                  context,
-                  "https://images.unsplash.com/photo-1574164052277-b9ea797de8e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-                  "Asia",
-                  "128 places",
-                ),
-                _card(
-                  context,
-                  "https://images.unsplash.com/photo-1574164052277-b9ea797de8e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-                  "Asia",
-                  "128 places",
-                ),
-                _card(
-                  context,
-                  "https://images.unsplash.com/photo-1574164052277-b9ea797de8e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-                  "Asia",
-                  "128 places",
-                ),
-                _card(
-                  context,
-                  "https://images.unsplash.com/photo-1574164052277-b9ea797de8e4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-                  "Asia",
-                  "128 places",
-                ),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context),
+                _card(context)
               ],
             ),
           ),
@@ -68,47 +55,55 @@ class CollectionPage extends StatelessWidget {
       ),
     );
   }
+}
 
-  Widget _card(
-      BuildContext context, String imageUrl, String category, String places) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.pushNamed(context, 'collection-detail');
-      },
-      child: Stack(
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.circular(20),
-            child: Image(
-              width: 165,
-              height: 190,
-              fit: BoxFit.cover,
-              image: NetworkImage(imageUrl),
-            ),
-          ),
-          Container(
+Widget _card(BuildContext context) {
+  return GestureDetector(
+    onTap: () {
+      Navigator.pushNamed(context, 'collection-detail');
+    },
+    child: Stack(
+      children: [
+        ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: const Image(
             width: 165,
             height: 190,
-            decoration: BoxDecoration(
-              color: const Color.fromRGBO(0, 0, 0, 1.3),
-              borderRadius: BorderRadius.circular(20),
-            ),
-            margin: const EdgeInsets.only(bottom: 20),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                headerText(text: category, color: Colors.white, fontSize: 18),
-                headerText(
-                  text: places,
-                  color: Colors.white,
-                  fontSize: 15,
-                  weight: FontWeight.w500,
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
+            fit: BoxFit.cover,
+            image: NetworkImage(
+                'https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'),
+          ),
+        ),
+        Container(
+          width: 165,
+          height: 190,
+          decoration: BoxDecoration(
+            color: const Color.fromRGBO(0, 0, 0, 1.3),
+            borderRadius: BorderRadius.circular(10),
+          ),
+        ),
+        Container(
+          alignment: Alignment.center,
+          margin: const EdgeInsets.only(right: 35, bottom: 20.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              headerText(
+                text: 'Asia',
+                color: Colors.white,
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+              headerText(
+                text: '128 places',
+                color: Colors.white,
+                fontSize: 15,
+                fontWeight: FontWeight.w300,
+              ),
+            ],
+          ),
+        ),
+      ],
+    ),
+  );
 }

@@ -1,8 +1,8 @@
-import 'package:delivery_app/src/features/presentation/widgets/header_text.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../colors/app_color.dart';
-import '../../widgets/back_button.dart';
+import 'package:delivery_app/src/colors/app_color.dart';
+import 'package:delivery_app/src/features/presentation/widgets/BackButtons/back_button.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Headers/header_text.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({Key? key}) : super(key: key);

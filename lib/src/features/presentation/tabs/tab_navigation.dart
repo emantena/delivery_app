@@ -1,12 +1,13 @@
-import 'package:delivery_app/src/features/presentation/widgets/alert_dialog.dart';
 import 'package:flutter/material.dart';
 
-import 'package:delivery_app/src/colors/app_color.dart';
-
+import 'package:delivery_app/src/features/presentation/widgets/Alerts/alert_dialog.dart';
+import 'package:delivery_app/src/features/presentation/widgets/Buttons/rounded_button.dart';
 import 'package:delivery_app/src/features/presentation/tabs/explore/view/explore_tab.dart';
 import 'package:delivery_app/src/features/presentation/tabs/favorite/favorite_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/order/order_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/profile/profile_page.dart';
+
+import 'package:delivery_app/src/colors/app_color.dart';
 
 class TabNavigation extends StatefulWidget {
   const TabNavigation({Key? key}) : super(key: key);
@@ -79,13 +80,17 @@ class TabNavigationState extends State<TabNavigation> {
   }
 
   Future _getLocation(BuildContext context) async {
-    alertDialog(
+    showAlertDialog(
       context: context,
       imagePath: const AssetImage("assets/icons/location.png"),
-      title: "Enable Your Location",
-      subTitle: "Please allow to use your location to show nearby restaurant on the map",
-      labelButton: "Enable location",
-      pressed: () {},
+      headerTitle: "Enable Your Location",
+      headerSubTitle: "Please allow to use your location to show nearby restaurant on the map",
+      doneButton: createButton(
+        context: context,
+        labelButton: 'Done',
+        buttonColor: AppColor.orange,
+        func: () {},
+      ),
     );
   }
 }

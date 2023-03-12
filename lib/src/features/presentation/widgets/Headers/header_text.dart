@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 
 Widget headerText({
-  required String text,
-  required Color color,
-  required double fontSize,
-  FontWeight weight = FontWeight.bold,
+  String text = "",
+  Color color = Colors.black,
+  FontWeight fontWeight = FontWeight.bold,
+  required double? fontSize,
   TextAlign textAlign = TextAlign.justify,
 }) {
   return Text(
     text,
+    textAlign: textAlign,
     style: TextStyle(
       color: color,
-      fontWeight: weight,
+      fontWeight: fontWeight,
       fontSize: fontSize,
     ),
-    textAlign: textAlign,
   );
 }

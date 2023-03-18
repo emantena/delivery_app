@@ -40,12 +40,17 @@ Widget popularCard(
                 children: [
                   Container(
                     margin: const EdgeInsets.symmetric(vertical: 7.0),
-                    child: Text(
-                      title,
-                      style: const TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.bold,
-                        fontSize: 17.0,
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.pushNamed(context, 'place-detail');
+                      },
+                      child: Text(
+                        title,
+                        style: const TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 17.0,
+                        ),
                       ),
                     ),
                   ),

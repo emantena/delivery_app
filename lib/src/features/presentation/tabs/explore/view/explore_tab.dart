@@ -189,12 +189,17 @@ Widget _card(BuildContext context) {
             children: [
               Container(
                 margin: const EdgeInsets.only(top: 10.0),
-                child: const Text(
-                  "Andy & Cindy's Diner",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 17.0,
+                child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushNamed(context, 'place-detail');
+                  },
+                  child: const Text(
+                    "Andy & Cindy's Diner",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 17.0,
+                    ),
                   ),
                 ),
               ),

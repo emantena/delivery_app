@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:delivery_app/src/features/presentation/widgets/alerts/alert_dialog.dart';
 import 'package:delivery_app/src/features/presentation/widgets/buttons/rounded_button.dart';
 import 'package:delivery_app/src/features/presentation/tabs/explore/view/explore_tab.dart';
-import 'package:delivery_app/src/features/presentation/tabs/favorite/favorite_page.dart';
+import 'package:delivery_app/src/features/presentation/tabs/favorite/view/favorite_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/order/view/order_page.dart';
 import 'package:delivery_app/src/features/presentation/tabs/profile/profile_page.dart';
 

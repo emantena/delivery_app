@@ -6,10 +6,10 @@ class CuisinesFilter extends StatefulWidget {
   const CuisinesFilter({Key? key}) : super(key: key);
 
   @override
-  _CuisinesFilterState createState() => _CuisinesFilterState();
+  CuisinesFilterState createState() => CuisinesFilterState();
 }
 
-class _CuisinesFilterState extends State<CuisinesFilter> {
+class CuisinesFilterState extends State<CuisinesFilter> {
   bool btnAmerican = false;
   bool btnAsia = false;
   bool btnSushi = false;

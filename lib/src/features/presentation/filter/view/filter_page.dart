@@ -11,10 +11,10 @@ class FilterPage extends StatefulWidget {
   const FilterPage({Key? key}) : super(key: key);
 
   @override
-  _FilterPageState createState() => _FilterPageState();
+  FilterPageState createState() => FilterPageState();
 }
 
-class _FilterPageState extends State<FilterPage> {
+class FilterPageState extends State<FilterPage> {
   // SORT BY BOOLEANS
   bool topRated = false;
   bool nearMe = false;
@@ -82,7 +82,7 @@ class _FilterPageState extends State<FilterPage> {
                     fontSize: 17.0,
                   ),
                 ),
-                PriceFilter()
+                const PriceFilter()
               ],
             ),
           ),

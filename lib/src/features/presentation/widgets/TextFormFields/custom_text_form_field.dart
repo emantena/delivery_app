@@ -23,7 +23,8 @@ class CustomTextFormField extends StatelessWidget {
   final TextFormFieldDelegate delegate;
   final TextEditingController? _controller;
 
-  CustomTextFormField({
+  const CustomTextFormField({
+    super.key,
     required this.textFormFieldType,
     required this.hintext,
     required this.delegate,
@@ -61,6 +62,8 @@ class CustomTextFormField extends StatelessWidget {
             case CustomTextFormFieldType.username:
               return DefaultFormValidator.validateIsNotEmpty(value: value ?? '');
             case CustomTextFormFieldType.phone:
+              return DefaultFormValidator.validateIsNotEmpty(value: value ?? '');
+            case CustomTextFormFieldType.dateOfBirth:
               return DefaultFormValidator.validateIsNotEmpty(value: value ?? '');
           }
         },

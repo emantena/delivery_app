@@ -6,10 +6,10 @@ class PriceFilter extends StatefulWidget {
   const PriceFilter({super.key});
 
   @override
-  _PriceFilterState createState() => _PriceFilterState();
+  PriceFilterState createState() => PriceFilterState();
 }
 
-class _PriceFilterState extends State<PriceFilter> {
+class PriceFilterState extends State<PriceFilter> {
   // Properties
   RangeValues _values = const RangeValues(0.3, 1.0);
   int _minPrize = 0;

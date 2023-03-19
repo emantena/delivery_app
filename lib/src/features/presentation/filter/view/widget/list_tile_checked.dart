@@ -18,10 +18,10 @@ class ListTileCheck extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _ListTileCheckState createState() => _ListTileCheckState();
+  ListTileCheckState createState() => ListTileCheckState();
 }
 
-class _ListTileCheckState extends State<ListTileCheck> {
+class ListTileCheckState extends State<ListTileCheck> {
   @override
   Widget build(BuildContext context) {
     return Column(

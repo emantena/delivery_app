@@ -75,7 +75,7 @@ class ProfileDetailPageState extends State<ProfileDetailPage> {
                     children: [
                       Transform.translate(
                         offset: const Offset(0, -60),
-                        child: AvatarView(
+                        child: const AvatarView(
                             backgroundImage:
                                 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60'),
                       ),

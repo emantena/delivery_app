@@ -20,7 +20,7 @@ class OrderPageState extends State<OrderPage> {
     return Scaffold(
       backgroundColor: AppColor.bgGreyPage,
       body: emptyOrderState
-          ? EmptyOrderView()
+          ? const EmptyOrderView()
           : CustomScrollView(
               slivers: [
                 SliverAppBar(

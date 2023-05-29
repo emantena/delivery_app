@@ -2,6 +2,7 @@ import 'dart:convert';
 
 class Failure {
   String? message;
+
   Map<String, dynamic> error = {};
 
   @override
@@ -17,4 +18,6 @@ class Failure {
     var jsonData = jsonDecode(body);
     error = jsonData;
   }
+
+  
 }

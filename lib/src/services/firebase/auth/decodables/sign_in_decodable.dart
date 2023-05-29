@@ -46,15 +46,15 @@ class SignInDecodable {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> _data = <String, dynamic>{};
-    _data["kind"] = kind;
-    _data["localId"] = localId;
-    _data["email"] = email;
-    _data["displayName"] = displayName;
-    _data["idToken"] = idToken;
-    _data["registered"] = registered;
-    _data["refreshToken"] = refreshToken;
-    _data["expiresIn"] = expiresIn;
-    return _data;
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data["kind"] = kind;
+    data["localId"] = localId;
+    data["email"] = email;
+    data["displayName"] = displayName;
+    data["idToken"] = idToken;
+    data["registered"] = registered;
+    data["refreshToken"] = refreshToken;
+    data["expiresIn"] = expiresIn;
+    return data;
   }
 }
